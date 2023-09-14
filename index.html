@@ -26,13 +26,11 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           <li class="nav-item">
-            <a class="nav-link active" href="#">About</a>
+            <a class="nav-link active" href="#beforeedu">Education</a>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Education</a>
+            <a class="nav-link active" href="#projects">Projects</a>
           <li class="nav-item">
-            <a class="nav-link active" href="#">Projects</a>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Contact</a>
+            <a class="nav-link active" href="#contactForm">Contact</a>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Links
@@ -70,7 +68,8 @@
           hobbies include playing and watching sports such as basketball,
           football, and baseball, as well as mindless stuff like solving
           <a class="link-opacity-75 link-opacity-100-hover link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
-            href="https://www.worldcubeassociation.org/persons/2017MCCL07" target="_blank">Rubik's Cubes</a>. <br>Read
+            href="https://www.worldcubeassociation.org/persons/2017MCCL07" target="_blank" id="beforeedu">Rubik's
+            Cubes</a>. <br>Read
           more about me below.
       </div>
     </div>
@@ -148,44 +147,96 @@
       </div>
     </div>
 
+    <!-- empty tag for jump-->
+    <div id="projects"></div>
+
     <!-- Create a section for my projects-->
     <div class="container p-5">
       <h1 class="text-center p-3">Projects</h1>
       <div class="row">
-        <div class="col">
+        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
           <div class="card">
-            <img src="project1.png" class="card-img-top" alt="Project 1">
+            <a href="#">
+              <img src="website.png" class="card-img-top" alt="Website">
+            </a>
             <div class="card-body">
-              <h4 class="card-title">Project 1</h4>
-              <h5 class="card-subtitle mb-2 text-muted">Project 1</h5>
-              <p class="card-text">This is a project I did for a class.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">This Website!</h4>
+              <h6 class="card-subtitle mb-2 text-muted">HTML, CSS, Bootstrap</h6>
+              <p class="card-text">Pretty self explanatory, I needed a personal website to show some of the things on
+                my
+                portfolio, and this can be part of it. Killing two birds with one stone.</p>
+              <a href="https://github.com/mcclainclain/mcclainclain.github.io" target="_blank"
+                class="btn btn-primary">GitHub <img src="github.png" width="15" alt=""></a>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
           <div class="card">
-            <img src="project2.png" class="card-img-top" alt="Project 2">
+            <a href="https://github.com/mcclainclain/cube-timer" target="_blank">
+              <img src="timer.jpg" class="card-img-top" alt="">
+            </a>
             <div class="card-body">
-              <h4 class="card-title">Project 2</h4>
-              <h5 class="card-subtitle mb-2 text-muted">Project 2</h5>
-              <p class="card-text">This is a project I did for a class.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">cube-timer</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Rust</h6>
+              <p class="card-text">A complete Rubik's cube timer built entirely in Rust. Made in a TUI format so it
+                feels just like timing your solves in a browser. Users can time their solves, save them, delete them,
+                etc.</p>
+              <a href="https://github.com/mcclainclain/cube-timer" class="btn btn-primary" target="_blank">GitHub <img
+                  src="github.png" width="15" alt=""></a>
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-lg-4 mb-3 d-flex align-items-stretch">
           <div class="card">
-            <img src="project3.png" class="card-img-top" alt="Project 3">
+            <a href="https://github.com/mcclainclain/assignment-texter" target="_blank">
+              <img src="text.png" class="card-img-top" alt="Project 3">
+            </a>
             <div class="card-body">
-              <h4 class="card-title">Project 3</h4>
-              <h5 class="card-subtitle mb-2 text-muted">Project 3</h5>
-              <p class="card-text">This is a project I did for a class.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h4 class="card-title">Assignment Texter</h4>
+              <h6 class="card-subtitle mb-2 text-muted">Python</h6>
+              <p class="card-text">I wrote a series of Python scripts that will help me in my everyday life by texting
+                me my grades as well as my upcoming assignments. The scripts are automated on a Raspberry Pi.</p>
+              <a href="https://github.com/mcclainclain/assignment-texter" class="btn btn-primary" target="_blank">GitHub
+                <img src="github.png" width="15" alt=""></a>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Wrapper container -->
+    <div class="container py-4">
+      <h1 class="text-center p-3">Contact Me</h1>
+
+      <!-- Bootstrap 5 starter form -->
+      <form id="contactForm" action="https://formcarry.com/s/19Xqofr6TT" method="POST" accept-charset="UTF-8">
+
+        <!-- Name input -->
+        <div class="mb-3">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" id="name" type="text" name="fullName" placeholder="Name" />
+        </div>
+
+        <!-- Email address input -->
+        <div class="mb-3">
+          <label class="form-label" for="emailAddress">Email Address</label>
+          <input class="form-control" id="emailAddress" name="email" type="email" placeholder="Email Address" />
+        </div>
+
+        <!-- Message input -->
+        <div class="mb-3">
+          <label class="form-label" for="message">Message</label>
+          <textarea class="form-control" id="message" name="Message" type="text" placeholder="Message"
+            style="height: 10rem;"></textarea>
+        </div>
+
+        <!-- Form submit button -->
+        <div class="d-grid">
+          <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+        </div>
+
+      </form>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
