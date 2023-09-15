@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="theme" data-bs-theme="light">
 
 <head>
   <meta charset="utf-8" />
@@ -44,8 +44,13 @@
                 <a class="dropdown-item" href="Resume.pdf">Resume <img src="resume.jpg" width="15" alt=""></a>
 
             </ul>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" id="themeToggle" onclick="setTheme()">Dark
+              Mode</a>
+
 
         </ul>
+
       </div>
     </div>
   </nav>
@@ -241,6 +246,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"></script>
+    <script>
+      function setTheme(themeName) {
+        let theme_toggle = document.getElementById("themeToggle");
+        let theme_el = document.getElementById("theme");
+        let currentTheme = theme_el.getAttribute("data-bs-theme");
+        let newTheme = currentTheme === "light" ? "dark" : "light";
+        theme_toggle.innerHTML = newTheme === "light" ? "Dark Mode" : "Light Mode";
+        theme_el.setAttribute("data-bs-theme", newTheme);
+      }
+
+    </script>
 </body>
 
 </html>
